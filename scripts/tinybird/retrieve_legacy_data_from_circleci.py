@@ -62,7 +62,7 @@ def collect_workflows_past_30_days():
 
         get_workflows_request = f"/api/v2/insights/{PROJECT_SLUG}/workflows/main?&branch={MASTER_BRANCH}&start-date={start.isoformat()}&end-date={end.isoformat()}"
 
-        data = send_request_to_connection(conn, get_workflows_request)
+        data = send_request_to_connection(conn, get_workflowss_request)
 
         if not data:
             print(f"could not resolve {get_workflows_request}")
